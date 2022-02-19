@@ -1,0 +1,104 @@
+ <style type="text/css">
+  @media screen and (max-width:1100px){
+         
+         #r video{
+            width: 480px;
+            height: 360px;
+         }
+      }
+  
+      @media screen and (max-width:720px){
+             #navim {
+            display: inline-block;
+
+           }
+
+       
+
+            #navi{
+
+          display: none; 
+          height: auto;
+           width: 80%;
+           border:1px solid white;
+           border-top: none;
+           
+           }
+              #navi li{
+
+        display: block;
+      }
+
+
+
+
+       #l,#r{
+              width:90%;
+            height: auto;
+             margin: 10px;
+       
+         }    
+          #l .card{
+            width:300;
+            height: auto;
+             margin: 0px 10px 30px 10px; 
+           
+           display: inline-block;
+           border-radius: 5px;
+                     
+           
+           
+         }
+        #l .card img{
+          
+            border-radius: 10px;
+            margin: 10px;
+          width: 280px;
+          height:120px;
+
+         }
+        #l .card ul{
+          list-style: none;
+         }
+         #l .card ul li{
+          display: block;
+            margin-left: 15px;
+            margin-right: 10px;
+          font-size: 20px;
+          text-align: left;
+          letter-spacing: 3px;
+          
+          
+           line-height: 1.4;
+
+         }  
+            #r video{
+            width: 360px;
+            height: 240px;
+         }
+       #r h1{
+   
+        width: 100%;
+        height:auto;
+    margin: 15px 0px 20px 30px;
+        font-size: 30px;
+      
+      }     
+      
+      }
+
+
+
+      @media screen and (max-width:350px){
+                
+         
+         #r video{
+            width: 240px;
+            height: 140px;
+               
+         }
+       
+         
+      }
+  
+   </style>

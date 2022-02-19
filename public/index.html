@@ -1,0 +1,259 @@
+<html>
+<head>
+  <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+   <link rel="stylesheet" type="text/css" href="styling/styling.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Original Surfer' rel='stylesheet'> 
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+ 
+   <script type="text/javascript">
+
+var inav=2;
+$(function() {
+    $(".menu").click(function() {
+       
+        var x = document.getElementById("navi");
+        if(inav%2==0)
+        {
+         $("#icon").css({'transform' : 'rotate(180deg)'});
+          $("#icon").css({'transition' : 'all 0.5s'});
+            x.style.left= "0px";
+           x.style.transition=" all 0.5s";
+
+        }
+        else{
+          $("#icon").css({'transform' : 'rotate(0deg)'});
+            
+           $("#icon").css({'transition' : 'all 0.5s'});
+            x.style.left = "-100%";
+               x.style.transition=" all 0.5s";
+        }
+      inav=inav+1;
+    });
+});
+  function sBottom() {
+        $('html, body').animate({scrollTop:$(document).height()}, 800);
+    }
+    function sTop() {
+        $('html, body').animate({scrollTop:0}, 800);
+    }
+
+
+
+    function load(datafile) {
+      $.getJSON("data/" + datafile, function(data) {
+        console.log(data.title);
+        var arrItems = []; // THE ARRAY TO STORE JSON ITEMS.
+        $.each(data.videos, function(index, value) {
+          arrItems.push(value);
+        });
+
+        console.log("Creating div cards");
+        var divContainer = document.getElementById("left");
+        console.log("Div:" + divContainer);
+        divContainer.innerHTML = "";
+       
+        for (var i=0; i<arrItems.length; i++){
+        for (var j=i+1; j<arrItems.length; j++){
+            if (arrItems[i].visitcont<=arrItems[j].visitcont){
+                var temp = arrItems[i];
+                arrItems[i] = arrItems[j]
+               arrItems[j] = temp;
+            }   
+        }    
+    }
+
+        for (var i = 0; i < arrItems.length; i++) {
+          var card = document.createElement("div");
+          card.className = "card";
+          var img1 = document.createElement("img");
+          img1.src = arrItems[i].icon;
+
+
+          card.appendChild(img1);
+          var ul = document.createElement('ul');
+          var name = document.createElement('li');
+
+          name.innerHTML = "<b>Name:</b>  "+ arrItems[i].name;
+          ul.appendChild(name);
+          var cont = document.createElement('li');
+          cont.innerHTML = "<b>Contains:</b>  " + arrItems[i].contant;
+          ul.appendChild(cont);
+          var qual = document.createElement('li');
+          qual.innerHTML = "<b> Quality:</b>" + arrItems[i].quality;
+                    ul.appendChild(qual);
+
+          var  vcount = document.createElement('li');
+          vcount.innerHTML = "<b> visited:</b>  " + arrItems[i].visitcont;
+
+          ul.appendChild(vcount);
+          
+         
+        
+          var bt = document.createElement('li');
+          bt.className = "mb";
+          var a = document.createElement('a');
+          a.href = arrItems[i].siteurl;
+          a.target = "_blank";
+          a.text = "visit";
+          bt.appendChild(a);
+          ul.appendChild(bt);
+          card.appendChild(ul);
+          divContainer.appendChild(card);
+        }
+
+});
+}
+$(document).ready(function() {
+  load("anime.json");
+});
+   $(window).on("load", function() {
+        $( "#topscroll" ).infiniteScroller(
+          {
+            maxSpeed: 20,
+
+                     speed: 1
+
+          });
+          });
+    </script>
+   
+   </head>
+   <body>
+     
+         <div id="top">
+         
+         <img src="./img/logo.png">
+          <div class="menu"><i id="icon" class="fas fa-angle-double-right"></i></div>
+     
+   <navi id="navi">
+    <center>      <li><a href="#" onclick="javascript:load('home.json');">Home</a></li>
+      <li><a href="#" onclick="javascript:load('anime.json');">Anime</a></li>
+      <li><a href="youtube.html">Youtube</a></li>
+      <li><a href="movies.html">Movies</a></li>
+      <li><a href="#"  onclick="javascript:load('music.json');">Music</a></li>
+      </center>
+
+      </navi> 
+         </div>
+         <ul id="scrole">
+         <li  ><i class="fas fa-chevron-circle-up" onclick="sTop()"></i></li>
+         <li ><i class="fas fa-chevron-circle-down" onclick="sBottom()"></i></li>
+
+         </ul>
+    
+           <h1 class="name">Anime</h1>
+           <center> 
+
+<div id="topscroll">
+    <div class="slide">
+        <img src="./img/anime_slider/1.png">
+    </div>
+    <div class="slide">
+        <img src="./img/anime_slider/2.png">
+    </div>
+    <div class="slide">
+        <img src="./img/anime_slider/3.png">
+    </div>
+    <div class="slide">
+       <img src="./img/anime_slider/4.png">
+    </div>
+    <div class="slide">
+       <img src="./img/anime_slider/5.png">
+    </div>
+    <div class="slide">
+       <img src="./img/anime_slider/6.png">
+    </div>
+        <div class="slide">
+        <img src="./img/anime_slider/7.png">
+    </div>
+    <div class="slide">
+        <img src="./img/anime_slider/8.png">
+    </div>
+    <div class="slide">
+        <img src="./img/anime_slider/9.png">
+    </div>
+    <div class="slide">
+       <img src="./img/anime_slider/10.png">
+    </div>
+    <div class="slide">
+       <img src="./img/anime_slider/11.png">
+    </div>
+    <div class="slide">
+       <img src="./img/anime_slider/12.png">
+    
+    </div>
+    <div class="slide">
+      <img src="./img/anime_slider/13.png">
+  </div>
+  <div class="slide">
+     <img src="./img/anime_slider/14.png">
+  </div>
+  <div class="slide">
+     <img src="./img/anime_slider/15.png">
+  </div>
+  <div class="slide">
+     <img src="./img/anime_slider/16.png">
+  </div>
+      <div class="slide">
+      <img src="./img/anime_slider/17.png">
+  </div>
+  <div class="slide">
+      <img src="./img/anime_slider/18.png">
+  </div>
+  <div class="slide">
+      <img src="./img/anime_slider/19.png">
+  </div>
+  <div class="slide">
+     <img src="./img/anime_slider/20.png">
+     </div>
+
+</div>
+     <div id="con">
+
+         <div id="left">
+
+          
+         </div>
+      
+          
+             
+        <div id="right">
+            <h1  >How to download anime</h1>    
+               
+             <video controls></video>
+              
+            <h1 >Recomended tools</h1>
+           <div id="t">
+        
+                 <button  style="background-color:#Fa9300;">  <a target="_blank" href="http://www.ucweb.com/">ucweb</a></button>
+         <button style="background-color:#D12013;"> <a target="_blank" href="https://www.opera.com/" >opera</a></button> 
+           <button style="background-color:#7b7b7b;"><a  target="_blank" href="https://www.videoder.com/"  >videoder</a></button> 
+           <button  style="background-color:#81b940;"> <a target="_blank" href="https://www.utorrent.com/utweb-index/">utorrent</a></button> 
+         
+       </div>       
+              
+              
+
+
+
+       </div>                            
+      
+     </div>
+  
+    <div id="about">
+      
+    </div>
+     </center> 
+   </body>
+</html>

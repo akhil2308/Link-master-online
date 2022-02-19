@@ -1,0 +1,97 @@
+{
+    
+      "videos":[
+            {
+                  "visitcont":1925,
+                  "icon":"img/otakustream_white.png",
+                  "name":"otakustream",
+            "contant":"sub",
+            "quality":"360,720,1080",
+           
+            "siteurl":"https://otakustream.tv/ongoing/"
+
+            },
+            {
+             "visitcont":1121,
+             "icon":"img/cartooncrazynet.png",
+                  "name":"cartooncrazy",
+            "contant":"dub",
+            "quality":"360,720,1080",
+          
+            "siteurl":"http://ww6.cartooncrazy.net/"
+            },
+       {
+             "visitcont":1783,
+             "icon":"img/gogoanime.png",
+                  "name":"goganime",
+            "contant":" Sub,Dub",
+            "quality":"360,720,1080",
+           
+            "siteurl":"https://www4.gogoanimes.tv/"
+            },
+       {
+             "visitcont":1400,
+             "icon":"img/9anime.png",
+                  "name":"9anime",
+            "contant":"Sub,Dub",
+            "quality":"360,720,1080",
+           
+            "siteurl":"https://www8.9anime.is/"
+            },
+       {
+             "visitcont":23,
+             "icon":"img/kissanime.jpg",
+                  "name":" kissanime",
+            "contant":"sub,dub",
+            "quality":"360,720,1080",
+           
+            "siteurl":"https://kissanime.ac/"
+            },
+         {
+             "visitcont":1006,
+             "icon":"img/horriblesubs1.png",
+                  "name":"horriblesubs",
+            "contant":"sub",
+            "quality":"360,720,1080",
+            
+            "siteurl":"https://horriblesubs.info/"
+            },
+              {
+             "visitcont":65,
+             "icon":"img/animesimple.png",
+                  "name":" animesimple",
+            "contant":"sub,dub",
+            "quality":"360,720",
+           
+            "siteurl":"https://ww1.animesimple.com/"
+            },
+                     {
+             "visitcont":15,
+             "icon":"img/chia.png",
+                  "name":" chiaanime",
+            "contant":"sub,dub",
+            "quality":"360,720",
+           
+            "siteurl":"http://ww2.chia-anime.tv/"
+            },
+                   {
+             "visitcont":45,
+             "icon":"img/animefreak.png",
+                  "name":" animefreak",
+            "contant":"sub,dub",
+            "quality":"360,720",
+          
+            "siteurl":"https://www.animefreak.tv/"
+            },
+                   {
+             "visitcont":1115,
+             "icon":"img/animenova.png",
+                  "name":" animenova",
+            "contant":"sub,dub",
+            "quality":"360,720",
+           
+            "siteurl":"http://www.animenova.org/"
+            }
+      ]
+}
+      

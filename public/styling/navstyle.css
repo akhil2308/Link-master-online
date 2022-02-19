@@ -1,0 +1,79 @@
+<style type="type/css">
+  *{
+         padding: 0px;
+         margin:0px; 
+        
+      }
+      body{
+       background-color: gray;
+         background-color: #252a34;
+   font-family: Sans-serif;
+         
+      }
+     #titile{
+         width:80%;
+         height:150px;
+         background-color:black;
+      }
+      #navim{
+        display: none;
+        
+        padding: 0px;
+        margin: 0px;
+        width: auto;
+        height: auto;
+     
+       
+      }
+      #navim li{
+  list-style: none;
+  display: inline-block;
+      }
+      #navim #tt{
+        text-align: center;
+        
+           font-size: 20px;
+         color:white;
+    
+        }  
+    
+ 
+      #show,#nshow{
+       
+       margin: 10px;
+        text-align: center;
+     color:black;
+       font-size: 35px;
+       cursor: pointer;
+      border-radius: 10px;
+      border: none;
+            padding : 0px 12px; 
+            background-color:  #ff652f;
+
+       }
+      #navi{
+          list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #eeeeee;
+  width: 720px;
+  height: auto;
+  margin: 20px;
+      transition: 0.5s;
+      }
+      #navi li{
+        display: inline-block;
+      }
+      #navi li a{
+      display: block;
+      font-size: 20px;
+  color: black;
+  text-align: center;
+  padding: 20px 40px;
+  text-decoration: none;
+      }
+   #navi li a:hover:not(.active) {background-color: #00adb5;}
+
+#navi  li a.active {background-color: #4CAF50;}
+</style>
