@@ -451,6 +451,7 @@
       display: block;
       position: absolute;
       cursor: pointer;
+
       right: 0px;
       top: 0px;
       background-color: white;
@@ -499,7 +500,7 @@
 
     #top #navi li a:hover {
       color: white;
-      #text-transform: uppercase;
+
     }
 
     .name {
